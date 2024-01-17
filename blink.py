@@ -2,11 +2,14 @@
 import RPi.GPIO as GPIO
 import time
 
-#GPIO.setmode(GPIO.BCM) Usado para la nomenclatura Broadcom
+#Nomenclatura Broadcom
+#GPIO.setmode(GPIO.BCM)
+#Nomenclatura Board
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
-GPIO.setup(8, GPIO.OUT) #Board Pin 8 fisico como arduino, BCM sería 14 por GPIO14
-
+GPIO.setup(8, GPIO.OUT)
+#Broadcom = 14 por GPIO 14
+#Board = 8 Pin 8
 while True:
     GPIO.output(8, True)
     time.sleep (1)
